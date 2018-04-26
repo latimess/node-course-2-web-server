@@ -15,11 +15,11 @@ app.use((req,res, next) =>{
   next();
 });
 
-app.use((req, res, next) =>{
+/*app.use((req, res, next) =>{
     res.render('maintenance.hbs',{
       pageTitle: 'Maintenance page'
     });
-});
+});*/
 app.use(express.static(__dirname + '/public'));
 hbs.registerHelper('getCurrentYear', () =>{
   return new Date().getFullYear();
